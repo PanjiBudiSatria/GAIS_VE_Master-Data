@@ -136,8 +136,8 @@ class TestGoodsServicesPoints(unittest.TestCase):
         driver.find_element(By.XPATH,"//input[@value='OK']").click()
         time.sleep(2)
 
-        # response_alert = driver.find_element(By.XPATH,"/html/body/div[4]/div/div[1]").text
-        # self.assertEqual(response_alert,"Successfully delete the data")
+        response_data = driver.find_element(By.XPATH,"/html/body/div[4]/div/div/table/tbody/tr/td").text
+        self.assertEqual(response_data,"-- Data not found --")
 
 
     def tearDown(self):
