@@ -56,47 +56,49 @@ class TestGroupYear(unittest.TestCase):
         # response_data = driver.find_element(By.CSS_SELECTOR,"#change_unit > span").text
         # self.assertEqual(response_data,"Business Unit : PUTERA SAMPOERNA FOUNDATION (PSF)")
 
-    # def test_b_price_points_edit(self):
-    #     driver=self.driver
-    #     driver.maximize_window()
-    #     driver.get("http://10.9.98.65/gais65/")
-    #     time.sleep(3)
-    #     driver.find_element(By.XPATH,"/html/body/div[2]/div[6]/div/div/form/input[4]").send_keys("it.appsupport")
-    #     time.sleep(1)
-    #     driver.find_element(By.ID,"regularInput").send_keys("Gais432")
-    #     time.sleep(1)
-    #     driver.find_element(By.XPATH,"/html/body/div[2]/div[6]/div/div/form/div/button").click()
-    #     time.sleep(3)
-    #     driver.find_element(By.XPATH,"//input[@id='14']").click()
-    #     time.sleep(3)
-    #     driver.find_element(By.ID,"save").click()
-    #     time.sleep(5)
+    def test_b_price_points_edit(self):
+        driver=self.driver
+        driver.maximize_window()
+        driver.get("http://10.9.98.65/gais65/")
+        time.sleep(3)
+        driver.find_element(By.XPATH,"/html/body/div[2]/div[6]/div/div/form/input[4]").send_keys("it.appsupport")
+        time.sleep(1)
+        driver.find_element(By.ID,"regularInput").send_keys("Gais432")
+        time.sleep(1)
+        driver.find_element(By.XPATH,"/html/body/div[2]/div[6]/div/div/form/div/button").click()
+        time.sleep(3)
+        driver.find_element(By.XPATH,"//input[@id='14']").click()
+        time.sleep(3)
+        driver.find_element(By.ID,"save").click()
+        time.sleep(5)
 
-    #     driver.find_element(By.XPATH,"//a[@data-id='427']").click()
-    #     time.sleep(2)
+        driver.find_element(By.XPATH,"//a[@data-id='427']").click()
+        time.sleep(2)
 
-    #     driver.find_element(By.XPATH,"//img[@src='assets/images/btn/button-master-data.gif']").click()
-    #     time.sleep(1)
+        driver.find_element(By.XPATH,"//img[@src='assets/images/btn/button-master-data.gif']").click()
+        time.sleep(1)
 
-    #     driver.find_element(By.XPATH,"//img[@src='assets/images/btn/target-list.png']").click()
-    #     time.sleep(1)
+        driver.find_element(By.XPATH,"//img[@src='assets/images/btn/target-list.png']").click()
+        time.sleep(1)
 
-    #     driver.find_element(By.XPATH,"/html/body/div[4]/div/div/div/ul/li/a[1]/img").click()
-    #     time.sleep(2)
+        driver.find_element(By.XPATH,"/html/body/div[4]/div/div/div/ul/li/a[7]/img").click()
+        time.sleep(2)
 
-    #     driver.find_element(By.XPATH,"/html/body/div[4]/div/form/table/tbody/tr[1]/td/input").send_keys("D")
-    #     driver.find_element(By.XPATH,"/html/body/div[4]/div/form/table/tbody/tr[3]/td/button").click()
-    #     time.sleep(1)
+        driver.find_element(By.XPATH,"/html/body/div[4]/div/form/table/tbody/tr[1]/td/input").send_keys("A/Y 2023")
+        driver.find_element(By.XPATH,"/html/body/div[4]/div/form/table/tbody/tr[2]/td/button").click()
+        time.sleep(1)
 
-    #     driver.find_element(By.XPATH,"//a[@title='Edit Price Point']").click()
-    #     time.sleep(1)
-    #     driver.find_element(By.XPATH,"/html/body/div[13]/div[2]/form/table/tbody/tr[2]/td/input").clear()
-    #     driver.find_element(By.XPATH,"/html/body/div[13]/div[2]/form/table/tbody/tr[2]/td/input").send_keys("10")
-    #     driver.find_element(By.XPATH,"/html/body/div[13]/div[2]/form/table/tbody/tr[3]/td/button[1]").click()
-    #     time.sleep(2)
+        driver.find_element(By.XPATH,"//a[@title='Edit Group Year']").click()
+        time.sleep(1)
+        driver.find_element(By.XPATH,"/html/body/div[13]/div[2]/form/table/tbody/tr[1]/td/input").clear()
+        driver.find_element(By.XPATH,"/html/body/div[13]/div[2]/form/table/tbody/tr[1]/td/input").send_keys("A/Y 2023 Rev1")
+        driver.find_element(By.XPATH,"/html/body/div[13]/div[2]/form/table/tbody/tr[2]/td/button[1]").click()
+        time.sleep(2)
 
-    #     response_alert = driver.find_element(By.XPATH,"/html/body/div[4]/div/div[1]").text
-    #     self.assertEqual(response_alert,"Successfully to update the data")
+        response_alert = driver.find_element(By.XPATH,"/html/body/div[4]/div/div[1]").text
+        response_data = driver.find_element(By.XPATH,"/html/body/div[4]/div/div[2]/table/tbody/tr/td[3]").text
+        self.assertEqual(response_alert,"Successfully to update the data")
+        self.assertEqual(response_data,"A/Y 2023 Rev1")
 
     # def test_c_price_points_delete(self):
     #     driver=self.driver
