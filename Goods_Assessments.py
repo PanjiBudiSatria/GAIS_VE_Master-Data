@@ -130,7 +130,7 @@ class TestGoodsAssessments(unittest.TestCase):
         self.assertEqual(response_description,"testing desc")
         self.assertEqual(response_weight,"15")
 
-    def test_c_price_points_delete(self):
+    def test_c_goods_assessments_delete(self):
         driver=self.driver
         driver.maximize_window()
         driver.get("http://10.9.98.65/gais65/")
