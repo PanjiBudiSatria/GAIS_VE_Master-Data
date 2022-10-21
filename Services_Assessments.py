@@ -77,7 +77,7 @@ class TestGoodsAssessments(unittest.TestCase):
         # response_data = driver.find_element(By.CSS_SELECTOR,"#change_unit > span").text
         # self.assertEqual(response_data,"Business Unit : PUTERA SAMPOERNA FOUNDATION (PSF)")
 
-    def test_b_goods_assessments_edit(self):
+    def test_b_services_assessments_edit(self):
         driver=self.driver
         driver.maximize_window()
         driver.get("http://10.9.98.65/gais65/")
@@ -102,14 +102,14 @@ class TestGoodsAssessments(unittest.TestCase):
         driver.find_element(By.XPATH,"//img[@src='assets/images/btn/target-list.png']").click()
         time.sleep(1)
 
-        driver.find_element(By.XPATH,"/html/body/div[4]/div/div/div/ul/li/a[4]/img").click()
+        driver.find_element(By.XPATH,"/html/body/div[4]/div/div/div/ul/li/a[5]/img").click()
         time.sleep(2)
 
         driver.find_element(By.XPATH,"/html/body/div[4]/div/form/table/tbody/tr[1]/td/input").send_keys("Item1")
         driver.find_element(By.XPATH,"/html/body/div[4]/div/form/table/tbody/tr[4]/td/button").click()
         time.sleep(2)
 
-        driver.find_element(By.XPATH,"//a[@title='Edit Goods Item']").click()
+        driver.find_element(By.XPATH,"//a[@title='Edit ']").click()
         time.sleep(1)
         driver.find_element(By.XPATH,"//*[@id='form_input']/table/tbody/tr[1]/td/input").clear()
         driver.find_element(By.XPATH,"//*[@id='form_input']/table/tbody/tr[1]/td/input").send_keys("Item1Rev1")
